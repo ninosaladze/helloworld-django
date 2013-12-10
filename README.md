@@ -12,4 +12,5 @@ A hello world example for Django applications.
 
 ## Stackato
 
-    stackato push
+    git checkout stackato
+    stackato push -n
