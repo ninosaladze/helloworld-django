@@ -10,4 +10,5 @@ RUN apt-get update \
 RUN pip install --upgrade pip
 COPY . $MICRO_SERVICE
 RUN pip install -r requirements.txt
+EXPOSE 8000
 CMD ["uwsgi", "--ini", "website.ini"]
