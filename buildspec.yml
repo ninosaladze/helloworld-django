@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 778404080221.dkr.ecr.us-east-1.amazonaws.com
-      - REPO_URI=778404080221.dkr.ecr.eu-central-1.amazonaws.com/ninosrepo
+      - REPO_URI=778404080221.dkr.ecr.us-east-1.amazonaws.com/ninosrepo
       - IMAGE_TAG=$(echo $VERSION.$CODEBUILD_BUILD_NUMBER)
   build:
     commands:
