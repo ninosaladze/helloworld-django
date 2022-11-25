@@ -11,7 +11,7 @@ phases:
       - echo rename image
       - docker tag ninosrepo:latest 778404080221.dkr.ecr.us-east-1.amazonaws.com/ninosrepo:latest
       - docker push 778404080221.dkr.ecr.us-east-1.amazonaws.com/ninosrepo:latest
-      - printf '[{"name":"NinosPipeline","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > NinosPipeline-imagedefinitions.json
+      - printf '[{"name":"ninosapp","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > NinosPipeline-imagedefinitions.json
       - docker image ls
   post_build:
     commands:
