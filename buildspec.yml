@@ -7,7 +7,7 @@ phases:
       - IMAGE_TAG=$(echo $VERSION.$CODEBUILD_BUILD_NUMBER)
   build:
     commands:
-      - docker build -t ninosrepo .
+      - docker build -t ninosrepo:latest .
       - echo rename image
       - docker tag ninosrepo:latest 778404080221.dkr.ecr.us-east-1.amazonaws.com/ninosrepo:latest
       - docker push 778404080221.dkr.ecr.us-east-1.amazonaws.com/ninosrepo:latest
